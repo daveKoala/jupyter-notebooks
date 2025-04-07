@@ -1,0 +1,8 @@
+
+ipykernel==6.29.5
+ipython==9.0.2
+PyPDF2
+pdf2image
+pytesseract
+papermill
+sentence_transformers

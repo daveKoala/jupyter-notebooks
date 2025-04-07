@@ -1,0 +1,26 @@
+from typing import Optional
+import os
+from pathlib import Path
+
+
+class Settings:
+    def __init__(self) -> None:
+        self.BASE_PATH: Path = Path("./")
+        self.DATA_DIR: Path = self.BASE_PATH / "data_sources"
+        self.API_KEY: Optional[str] = os.getenv("MY_API_KEY")
+        self.PROCESSED_FILE: Path = self.BASE_PATH / "processed_data.txt"
+        self.DEBUG: bool = False
+        self.SENTENCE_TRANSFORMER_MODEL: str = "all-MiniLM-L6-v2"
+        self.SENTENCE_TRANSFORMER_CHUNK_SIZE: int = 500
+        self.SENTENCE_TRANSFORMER_OVERLAP_SIZE: int = 50
+
+    def __repr__(self) -> str:
+        config_lines = []
+        for key, value in self.__dict__.items():
+            # Mask any field that looks like a secret/key/token
+            masked = "***" if "key" in key.lower() or "token" in key.lower() else value
+            config_lines.append(f"  {key}={masked}")
+        return "Settings(\n" + "\n".join(config_lines) + "\n)"
+
+
+settings = Settings()
