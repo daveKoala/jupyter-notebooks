@@ -4,3 +4,4 @@
 .venv
 proj_rag/chunked_data.txt
 proj_rag/processed_data.txt
+proj_rag/output
