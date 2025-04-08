@@ -10,13 +10,21 @@ This notebook demonstrates how to:
 - Save and load vector index locally
 - Perform cosine similarity search without any external services
 
-## Steps to Build a Robust RAG/GenAI System:
+## **What this is not:**
+
+This project is a 'question/answer' implantation. I.E. You ask a question, it will search the uploaded documents and return a set of 'chunks' and a reference to the original article.
+
+I am not implementing passing the question and 'answers' to a GenAI like ChatGPT
+
+This project is not a conversation (appending tokens and back/forth)
+
+## However, Steps to Build a Robust RAG/GenAI System:
 
 ### What Tutorials Often Show:
 
 1 Simple RAG pipelines using LangChain or LlamaIndex
 
-2 Embedding text chunks into vector stores like FAISS
+2 Embedding text chunks into vector stores like FAISS (Facebook AI Similarity Search (Faiss), a library that allows a quick search for multimedia documents that are similar to each other)
 
 3 Connecting it with an LLM (e.g., OpenAI or local)
 
