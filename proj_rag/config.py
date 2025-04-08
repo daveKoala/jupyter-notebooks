@@ -9,8 +9,12 @@ class Settings:
         self.DATA_DIR: Path = self.BASE_PATH / "data_sources"
         self.API_KEY: Optional[str] = os.getenv("MY_API_KEY")
         self.PROCESSED_FILE: Path = self.BASE_PATH / "processed_data.txt"
+        self.CHUNKED_FILE: Path = self.BASE_PATH / "chunked_data.txt"
+        self.VECTOR_STORE: Path = self.BASE_PATH / "vector_index_local.parquet"
         self.DEBUG: bool = False
-        self.SENTENCE_TRANSFORMER_MODEL: str = "all-MiniLM-L6-v2"
+        self.SENTENCE_TRANSFORMER_MODEL: str = (
+            "all-MiniLM-L6-v2"  ##"sentence-transformers/all-MiniLM-L6-v2"
+        )
         self.SENTENCE_TRANSFORMER_CHUNK_SIZE: int = 500
         self.SENTENCE_TRANSFORMER_OVERLAP_SIZE: int = 50
 

@@ -1,8 +1,16 @@
 
+fastparquet
 ipykernel==6.29.5
 ipython==9.0.2
-PyPDF2
-pdf2image
-pytesseract
+ipywidgets
+numpy==1.26.4
+pandas
 papermill
+pdf2image
+pyarrow
+PyPDF2
+pytesseract
 sentence_transformers
+scikit-learn
+torch
+transformers
